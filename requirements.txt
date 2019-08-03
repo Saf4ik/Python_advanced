@@ -3,3 +3,5 @@ jupyter
 chardet
 pyyaml
 pylint
+pytest
+pytest-cov
