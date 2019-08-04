@@ -1,0 +1,7 @@
+2019-08-04 17:06:03,298 - INFO - server started with localhost:8000
+2019-08-04 17:08:50,579 - INFO - Client was detected 127.0.0.1:49242
+2019-08-04 17:09:00,179 - INFO - Client send valid request {'action': 'echo', 'time': 1564927740.139061, 'data': 'Test'}
+2019-08-04 18:45:23,874 - INFO - server started with localhost:8000
+2019-08-04 18:45:40,341 - INFO - Client was detected 127.0.0.1:49688
+2019-08-04 18:45:48,443 - INFO - Client send valid request {'action': 'echo', 'time': 1564933548.43815, 'data': 'Test'}
+2019-08-04 18:45:48,443 - DEBUG - get_echo: {'action': 'echo', 'time': 1564933548.43815, 'data': 'Test'}
