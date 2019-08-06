@@ -5,3 +5,41 @@
 2019-08-04 18:45:40,341 - INFO - Client was detected 127.0.0.1:49688
 2019-08-04 18:45:48,443 - INFO - Client send valid request {'action': 'echo', 'time': 1564933548.43815, 'data': 'Test'}
 2019-08-04 18:45:48,443 - DEBUG - get_echo: {'action': 'echo', 'time': 1564933548.43815, 'data': 'Test'}
+2019-08-05 16:22:39,021 - INFO - server started with localhost:8000
+2019-08-05 16:22:55,040 - INFO - Client was detected 127.0.0.1:45642
+2019-08-05 16:23:11,485 - INFO - Client send valid request {'action': 'echo', 'time': 1565011391.417803, 'data': 'Test'}
+2019-08-05 16:23:11,485 - DEBUG - get_echo: {'action': 'echo', 'time': 1565011391.417803, 'data': 'Test'}
+2019-08-05 16:43:49,528 - INFO - server started with localhost:8000
+2019-08-05 16:44:27,863 - INFO - Client was detected 127.0.0.1:45920
+2019-08-05 16:45:58,419 - INFO - server started with localhost:8000
+2019-08-05 16:46:02,004 - INFO - Client was detected 127.0.0.1:45932
+2019-08-05 16:46:48,963 - INFO - server started with localhost:8000
+2019-08-05 16:46:51,821 - INFO - Client was detected 127.0.0.1:45944
+2019-08-05 16:48:03,777 - INFO - server started with localhost:8000
+2019-08-05 16:48:08,223 - INFO - Client was detected 127.0.0.1:45966
+2019-08-05 16:54:36,609 - INFO - server started with localhost:8000
+2019-08-05 16:54:39,638 - INFO - Client was detected 127.0.0.1:46028
+2019-08-05 16:56:35,547 - INFO - server started with localhost:8000
+2019-08-05 16:56:38,386 - INFO - Client was detected 127.0.0.1:46050
+2019-08-05 17:00:25,182 - INFO - server started with localhost:8000
+2019-08-05 17:00:28,449 - INFO - Client was detected 127.0.0.1:46080
+2019-08-05 17:09:11,382 - INFO - server started with localhost:8000
+2019-08-05 17:09:14,422 - INFO - Client was detected 127.0.0.1:46232
+2019-08-05 17:09:19,687 - INFO - Client send valid request {'action': 'echo', 'time': 1565014159.682591, 'data': 'Testik'}
+2019-08-05 17:09:19,688 - DEBUG - get_echo: {'action': 'echo', 'time': 1565014159.682591, 'data': 'Testik'}
+2019-08-05 17:17:54,391 - INFO - server started with localhost:8000
+2019-08-05 17:17:56,901 - INFO - Client was detected 127.0.0.1:46342
+2019-08-05 17:18:00,228 - INFO - Client send valid request {'action': 'echo', 'time': 1565014680.224556, 'data': '123'}
+2019-08-05 17:18:00,229 - DEBUG - get_echo: {'action': 'echo', 'time': 1565014680.224556, 'data': '123'}
+2019-08-05 19:00:09,747 - INFO - server started with localhost:8000
+2019-08-05 19:00:13,147 - INFO - Client was detected 127.0.0.1:47100
+2019-08-05 19:00:23,566 - INFO - Client was detected 127.0.0.1:47106
+2019-08-05 19:02:46,770 - INFO - server started with localhost:8000
+2019-08-05 19:02:56,326 - INFO - Client was detected 127.0.0.1:47132
+2019-08-05 19:03:20,202 - INFO - Client was detected 127.0.0.1:47140
+2019-08-05 19:03:34,008 - INFO - Client send valid request {'action': 'echo', 'time': 1565021014.005672, 'data': 'Hello man'}
+2019-08-05 19:03:34,008 - DEBUG - get_echo: {'action': 'echo', 'time': 1565021014.005672, 'data': 'Hello man'}
+2019-08-05 19:03:57,739 - INFO - Client send valid request {'action': 'echo', 'time': 1565021037.739499, 'data': 'Yo bro'}
+2019-08-05 19:03:57,740 - DEBUG - get_echo: {'action': 'echo', 'time': 1565021037.739499, 'data': 'Yo bro'}
+2019-08-05 19:05:25,944 - INFO - Client send valid request {'action': 'echo', 'time': 1565021125.944014, 'data': '123'}
+2019-08-05 19:05:25,944 - DEBUG - get_echo: {'action': 'echo', 'time': 1565021125.944014, 'data': '123'}
