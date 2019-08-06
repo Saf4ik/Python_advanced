@@ -2,9 +2,12 @@ from argparse import ArgumentParser
 import yaml
 import json
 import socket
+import logging
+import select
 
 from protocol import validate_request, make_response
 from actions import resolve
+from handlers import handle_default_request
 
 parser = ArgumentParser()
 
@@ -26,47 +29,70 @@ if args.config:
         file_config = yaml.load(file, Loader=yaml.Loader)
         config.update(file_config)
 
-host, port = config.get('host'), config.get('port')
 
+# logger = logging.getLogger('main')
+# formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+# file_handler = logging.FileHandler('main.log')
+# stream_handler = logging.StreamHandler()
+
+# file_handler.setLevel(logging.DEBUG)
+# stream_handler.setLevel(logging.DEBUG)
+
+# file_handler.setFormatter(formatter)
+# stream_handler.setFormatter(formatter)
+
+# logger.addHandler(file_handler)
+# logger.addHandler(stream_handler)
+# logger.setLevel(logging.DEBUG)
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers = [
+        logging.FileHandler('main.log'),
+        logging.StreamHandler(),
+    ]
+)
+
+requests = []
+connections = []
+
+
+host, port = config.get('host'), config.get('port')
 
 
 try:
     sock = socket.socket()
     sock.bind((host, port))
+    # sock.setblocking(False)
+    sock.settimeout(0)
     sock.listen(5)
 
-    print(f'server started with { host }:{ port }')
+    logging.info(f'server started with { host }:{ port }')
 
     while True:
-        client, address = sock.accept()
-        print(f'Client was detected { address[0] }:{ address[1] }')
+        try:
+            client, address = sock.accept()
+            logging.info(f'Client was detected { address[0] }:{ address[1] }')
+            connections.append(client)
+        except:
+            pass
 
-        b_request = client.recv(config.get('buffersize'))
-        
-        request = json.loads(b_request.decode())
+        rlist, wlist, xlist = select.select(
+            connections, connections, connections, 0
+            )
 
-        if validate_request(request):
-            action_name = request.get('action')
-            controller = resolve(action_name)
-            if controller:
-                try:
-                    print(f'Client send valid request { request }')
-                    response = controller(request)
-                except Exception as err:
-                    print(f'Internal server error: { err }')
-                    response = make_response(request, 500, data='Internal server error')
-            else:
-                print(f'Controller with action_name {action_name} does not exists')
-                response = make_response(request, 404, 'Action not found')
-        else:
-            print(f'Client send invalid request { request }')
-            response = make_response(request, 404, 'Wrong request')
-        
-        str_response = json.dumps(response)
-        client.send(str_response.encode())            
+        for read_client in rlist:
+            bytes_request = read_client.recv(config.get('buffersize'))
+            requests.append(bytes_request)
 
+        if requests:
+            bytes_request = requests.pop()
+            bytes_response = handle_default_request(bytes_request)
 
-
+            for write_client in wlist:
+                write_client.send(bytes_response)
 
 except KeyboardInterrupt:
     print('Server shutdown.')
