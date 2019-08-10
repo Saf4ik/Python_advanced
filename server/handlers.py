@@ -12,8 +12,8 @@ def handle_default_request(bytes_request):
     request = json.loads(bytes_request.decode())
 
     if validate_request(request):
-        action_name = request.get('action')
-        controller = resolve(action_name)
+        actions_name = request.get('action')
+        controller = resolve(actions_name)
         if controller:
             try:
                 logging.info(f'Client send valid request { request }')
@@ -22,7 +22,7 @@ def handle_default_request(bytes_request):
                 logging.critical(f'Internal server error: { err }')
                 response = make_response(request, 500, data='Internal server error')
         else:
-            logging.error(f'Controller with action_name {action_name} does not exists')
+            logging.error(f'Controller with action_name {actions_name} does not exists')
             response = make_response(request, 404, 'Action not found')
     else:
         logging.error(f'Client send invalid request { request }')

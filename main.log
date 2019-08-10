@@ -43,3 +43,39 @@
 2019-08-05 19:03:57,740 - DEBUG - get_echo: {'action': 'echo', 'time': 1565021037.739499, 'data': 'Yo bro'}
 2019-08-05 19:05:25,944 - INFO - Client send valid request {'action': 'echo', 'time': 1565021125.944014, 'data': '123'}
 2019-08-05 19:05:25,944 - DEBUG - get_echo: {'action': 'echo', 'time': 1565021125.944014, 'data': '123'}
+2019-08-08 17:00:39,292 - INFO - server started with localhost:8000
+2019-08-08 17:01:01,885 - INFO - Client was detected 127.0.0.1:51376
+2019-08-08 17:01:15,394 - INFO - Client was detected 127.0.0.1:51382
+2019-08-08 17:01:23,820 - INFO - Client send valid request {'action': 'echo', 'time': 1565272883.73266, 'data': 'Hello'}
+2019-08-08 17:01:23,820 - CRITICAL - Internal server error: 'dict' object has no attribute '__module__'
+2019-08-08 17:04:12,737 - INFO - server started with localhost:8000
+2019-08-08 17:04:20,214 - INFO - Client was detected 127.0.0.1:51394
+2019-08-08 17:04:23,273 - INFO - Client was detected 127.0.0.1:51396
+2019-08-08 17:04:31,482 - INFO - Client send valid request {'action': 'echo', 'time': 1565273071.47903, 'data': 'Hello'}
+2019-08-08 17:04:31,482 - CRITICAL - Internal server error: 'dict' object has no attribute '__module__'
+2019-08-08 17:07:47,414 - INFO - server started with localhost:8000
+2019-08-08 17:08:09,601 - INFO - Client was detected 127.0.0.1:51420
+2019-08-08 17:08:26,668 - INFO - Client was detected 127.0.0.1:51426
+2019-08-08 17:08:32,701 - INFO - Client send valid request {'action': 'echo', 'time': 1565273312.697433, 'data': '123'}
+2019-08-08 17:08:32,702 - CRITICAL - Internal server error: 'dict' object has no attribute '__module__'
+2019-08-08 17:10:59,014 - INFO - server started with localhost:8000
+2019-08-08 17:11:05,221 - INFO - Client was detected 127.0.0.1:51444
+2019-08-08 17:11:09,362 - INFO - Client was detected 127.0.0.1:51446
+2019-08-08 17:11:15,880 - INFO - Client send valid request {'action': 'echo', 'time': 1565273475.876952, 'data': '123'}
+2019-08-08 17:11:15,880 - CRITICAL - Internal server error: 'dict' object has no attribute '__module__'
+2019-08-08 17:13:17,124 - INFO - server started with localhost:8000
+2019-08-08 17:13:29,196 - INFO - Client was detected 127.0.0.1:51468
+2019-08-08 17:13:39,949 - INFO - Client was detected 127.0.0.1:51474
+2019-08-08 17:13:45,037 - INFO - Client send valid request {'action': 'echo', 'time': 1565273625.033997, 'data': '123'}
+2019-08-08 17:13:45,037 - CRITICAL - Internal server error: 'dict' object has no attribute '__module__'
+2019-08-08 17:13:57,474 - INFO - Client send valid request {'action': 'echo', 'time': 1565273637.474084, 'data': '321'}
+2019-08-08 17:13:57,475 - CRITICAL - Internal server error: 'dict' object has no attribute '__module__'
+2019-08-08 17:22:05,388 - INFO - server started with localhost:8000
+2019-08-08 17:22:38,056 - INFO - Client was detected 127.0.0.1:51572
+2019-08-08 17:22:43,696 - INFO - Client was detected 127.0.0.1:51574
+2019-08-08 17:22:49,270 - INFO - Client send valid request {'action': 'echo', 'time': 1565274169.265819, 'data': '123'}
+2019-08-08 17:22:49,271 - CRITICAL - Internal server error: 'dict' object has no attribute '__module__'
+2019-08-08 17:49:23,866 - INFO - server started with localhost:8000
+2019-08-08 17:49:33,956 - INFO - Client was detected 127.0.0.1:51736
+2019-08-08 17:49:40,596 - INFO - Client send valid request {'action': 'echo', 'time': 1565275780.591434, 'data': '123'}
+2019-08-08 17:49:40,596 - CRITICAL - Internal server error: 'dict' object has no attribute '__module__'
